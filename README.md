@@ -1,7 +1,10 @@
 # Alethic Instruction-Based State Machine (ISM)
 
 ## Introduction
-Welcome to the Alethic ISM project, an experimental framework utilizing state machines for complex instruction processing, especially in language processing. Developed from scratch in under two months, it includes a full suite of initial research experiments.
+Welcome to the Alethic ISM project group! This project was born from my interest and work on "Case for Animal-Friendly LLMs". It's an experimental journey, and while I don't claim to have all the answers, I'm excited about what we're building here. 
+
+# Description
+The Alethic ISM project, an experimental framework utilizing state machines for instruction processing, specifically but not limited to language processing. Developed from scratch in under two months, it includes a full suite of initial research experiments, which we will share shortly. 
 
 ## Key Concepts
 - **State Machines**: Alethic ISM employs state machines for data and instruction handling, with each state representing distinct information or processing stages.

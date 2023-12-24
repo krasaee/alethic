@@ -11,6 +11,8 @@ Welcome to the Alethic ISM project, an experimental framework utilizing state ma
 ## Overview
 Alethic ISM uses state objects encapsulating data values, constants, or function derived data. These states are processed by a range of processors for executing instructions and managing transitions, guided by flexible configurations like, particularly StateConfigLM for language processing.
 
+# Example Machinery for Case for Animal-Friendly LLMs
+![Conceptual Machinery AnimaLLM](docs/ConceptualMachineryAnimaLLM_20231223.png)
 
 ## Getting Started
 - **Dependencies**: To begin with the Alethic ISM, clone the core components:

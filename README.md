@@ -7,6 +7,7 @@ Welcome to the Alethic ISM project group! Born from the study "Case for Animal-F
 - **State**: Manages data and instructions, representing processing stages.
 - **Instruction**: Enables transformation and processing of states.
 - **Instruction Processor**: Transforms states based on custom instructions.
+- **ProcessorStateStorage**: Handles the ephemeral and or long term storage of state information (see alethic-ism-db).
 - **Extensibility and Flexibility**: Supports processors like OpenAI, Anthropic, and more.
 
 ## Overview

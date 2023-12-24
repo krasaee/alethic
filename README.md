@@ -5,9 +5,9 @@ Welcome to the Alethic ISM project group! Born from the study "Case for Animal-F
 
 ## Key Concepts
 - **State**: Manages data and instructions, representing processing stages.
-- **State Storage**: Handles the ephemeral and or long term storage of state information (see alethic-ism-db).
 - **Instruction**: Enables transformation and processing of states.
 - **Instruction Processor**: Transforms states based on custom instructions.
+- **State Storage**: Handles the ephemeral and or long term storage of state information (see alethic-ism-db).
 - **Extensibility and Flexibility**: Supports processors like OpenAI, Anthropic, and more.
 
 ## Overview

@@ -1,18 +1,22 @@
 # Alethic Instruction-Based State Machine (ISM)
 
 ## Introduction
-Welcome to the Alethic ISM project group! This project was born from my interest and work on "Case for Animal-Friendly LLMs". It's an experimental journey, and while I don't claim to have all the answers, I'm excited about what we're building here. 
-
-# Description
-The Alethic ISM project, an experimental framework utilizing state machines for instruction processing, specifically but not limited to language processing. Developed from scratch in under two months, it includes a full suite of initial research experiments, which we will share shortly. 
+Welcome to the Alethic ISM project group! Born from the study "Case for Animal-Friendly LLMs," this project is a journey into experimental language instruction processing, exploring how language models respond to animal-related queries.
 
 ## Key Concepts
-- **State Machines**: Alethic ISM employs state machines for data and instruction handling, with each state representing distinct information or processing stages.
-- **Instruction Processing**: It processes states incrementally, ideal for tasks like generating and evaluating language model responses, leading to new state convergences.
-- **Extensibility and Flexibility**: Designed to support various processors, including OpenAI and Anthropic, with future plans to integrate models like Llama2 and Falcon. It's adaptable for diverse instructional processors and data processing.
+- **State**: Manages data and instructions, representing processing stages.
+- **Instruction**: Enables transformation and processing of states.
+- **Instruction Processor**: Transforms states based on custom instructions.
+- **Extensibility and Flexibility**: Supports processors like OpenAI, Anthropic, and more.
 
 ## Overview
-Alethic ISM uses state objects encapsulating data values, constants, or function derived data. These states are processed by a range of processors for executing instructions and managing transitions, guided by flexible configurations like, particularly StateConfigLM for language processing.
+Alethic ISM utilizes state machines for versatile instruction processing:
+- State objects encapsulate data and drive processing.
+- Extensible for custom instructions and processors.
+- Scalable architecture using a consumer/producer approach for API-level state management.
+- Potential for a graph-based UI to visualize state transitions.
+
+The project's experimental nature provides valuable insights into language model behaviors and data processing strategies.
 
 # Example Machinery for Case for Animal-Friendly LLMs
 ![Conceptual Machinery AnimaLLM](docs/ConceptualMachineryAnimaLLM_20231223r2.png)

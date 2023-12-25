@@ -51,4 +51,4 @@ Alethic Research, Princeton University Center for Human Values, New York Univers
 
 ---
 
-Stay tuned for more updates and information. For involvement opportunities, visit [Alethic ISM GitHub page](https://github.com/quantumwake/alethic) or contact us at krasaee@gmail.com.
+Stay tuned for more updates and information. For involvement opportunities, visit [Alethic ISM GitHub page](https://github.com/quantumwake/alethic) or create an issue / comment ticket.

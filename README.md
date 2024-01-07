@@ -23,15 +23,18 @@ The project's experimental nature provides valuable insights into language model
 ![Conceptual Machinery AnimaLLM](docs/ConceptualMachineryAnimaLLM_20231223r2.png)
 
 ## Getting Started
-- **Dependencies**: To begin with the Alethic ISM, clone the core components:
+- **Dependencies**: core components of the Alethic system:
   - [Alethic ISM Core](https://github.com/quantumwake/alethic-ism-core.git)
   - [Alethic ISM Database](https://github.com/quantumwake/alethic-ism-db.git)
  
-- **Working Machine**: Check out our operational components, forming the project's backbone:
+- **Working Machine**: components forming working processors for openai and anthropcis:
   - [Alethic ISM API](https://github.com/quantumwake/alethic-ism-api.git)
   - [Alethic ISM Processor - OpenAI](https://github.com/quantumwake/alethic-ism-processor-openai.git)
   - [Alethic ISM Processor - Anthropic](https://github.com/quantumwake/alethic-ism-processor-anthropic.git)
  
+- **In Development Machine**: components forming the processors, such as llama and falcon.
+  - [Alethic ISM Processor - General](https://github.com/quantumwake/alethic-ism-processor-general.git)
+    
 - **Work in Progress**: Explore our expanding capabilities and future directions:
   - [Alethic ISM Processor - Gemini (TBD)](https://github.com/quantumwake/alethic-ism-processor-gemini)
   - [Alethic ISM Processor - Falcon (TBD)](https://github.com/quantumwake/alethic-ism-processor-falcon)

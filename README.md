@@ -1,7 +1,7 @@
 # Alethic Instruction-Based State Machine (ISM)
 
 ## Introduction
-Welcome to the Alethic ISM project group! Born from the study "Case for Animal-Friendly LLMs," this project is a journey into experimental language instruction processing, exploring how language models respond to animal-related queries.
+Welcome to the Alethic ISM project group! Born from the study "The Case for Animal-Friendly LLMs," this project is a journey into experimental language instruction processing, exploring how language models respond to animal-related queries.
 
 ## Key Concepts
 - **State**: Manages data and instructions, representing processing stages.

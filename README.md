@@ -1,13 +1,23 @@
 # Alethic Instruction-Based State Machine (ISM)
 
-## Introduction
-Welcome to the Alethic ISM project group! Born from the study [The Case for Animal-Friendly LLMs](docs/Ghose%2C%20Tse%2C%20Rasaee%2C%20Sebo%2C%20Singer.pdf) this project is a journey into experimental language instruction processing, exploring how language models respond to animal-related queries, of course not limited to this only.
+**See below for list of related child projects**
+
+## Introduction 
+Welcome to the Alethic ISM project group! Originating from the study [The Case for Animal-Friendly LLMs](docs/Ghose%2C%20Tse%2C%20Rasaee%2C%20Sebo%2C%20Singer.pdf), this project embarks on a journey into experimental language instruction processing, exploring how language models respond to animal-related queries, while also being open to a broader range of applications.
+
+The Alethic Instruction-Based State Machine (ISM) is a versatile framework designed to efficiently process a wide spectrum of instructions. Fundamentally, the project is driven by a commitment to animal welfare, using language-based instructions as a foundational use-case to evaluate, benchmark, score, and gather insights concerning animal well-being. Nonetheless, the architecture and functionality of the Alethic ISM go beyond its initial aim, offering a platform that boasts considerable flexibility and scalability.
+
+Utilizing a state machine approach, the Alethic ISM manages and executes instructions, and transforms states through a network of interconnected processors. These processors are capable of handling a broad array of tasks beyond merely language-based ones, encompassing legal and medical evaluation, benchmarking, scoring, and various other graph-based instructions tailored for specific domains.
+
+The system's architecture is built on a consumer/producer model for API-level state management and instruction execution. Together with a graph-based UI that facilitates the creation of connections between instructions and states, the Alethic ISM provides a dynamic and intuitive visualization of the process, enhancing the user's ability to understand and interact with the system.
+
+Additionally, in the Alethic ISM, each state's execution is immutable, occurring only once. Reusing previous states with new instructions results in new, immutable outputs, not alterations to existing states. Every instruction process is marked with a checksum to ensure uniqueness; modifications trigger new state outputs and, consequently, new outputs for subsequent transitions. This design guarantees transparency and auditability in the process flow. As a result, the Alethic ISM allows for the maintenance of multiple versions of the same state inputs given new instructions, enabling the comparison of a timeline of states as new instructions are applied. This feature facilitates an in-depth analysis and understanding of how changes in instructions impact the evolution of states over time.
 
 ## Key Concepts
 - **State**: Manages data and instructions, representing processing stages.
 - **Instruction**: Enables transformation and processing of states.
 - **Instruction Processor**: Transforms states based on custom instructions.
-- **State Storage**: Handles the ephemeral and or long term storage of state information (see alethic-ism-db).
+- **State Storage**: Handles the ephemeral, immutable, versioning, and storage of state data (see alethic-ism-db).
 - **Extensibility and Flexibility**: Supports processors like OpenAI, Anthropic, and more.
 
 ## Overview

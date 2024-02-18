@@ -37,19 +37,20 @@ The project's experimental nature provides valuable insights into language model
   - [Alethic ISM Core](https://github.com/quantumwake/alethic-ism-core.git)
   - [Alethic ISM Database](https://github.com/quantumwake/alethic-ism-db.git)
  
+
 - **Working Machine**: components forming working processors for openai and anthropcis:
   - [Alethic ISM API](https://github.com/quantumwake/alethic-ism-api.git)
   - [Alethic ISM Processor - OpenAI](https://github.com/quantumwake/alethic-ism-processor-openai.git)
   - [Alethic ISM Processor - Anthropic](https://github.com/quantumwake/alethic-ism-processor-anthropic.git)
- 
-- **In Development Machine**: components forming the processors, such as llama and falcon.
-  - [Alethic ISM Processor - General](https://github.com/quantumwake/alethic-ism-processor-general.git)
-    
-- **Work in Progress**: Explore our expanding capabilities and future directions:
-  - [Alethic ISM Processor - Gemini (TBD)](https://github.com/quantumwake/alethic-ism-processor-gemini)
-  - [Alethic ISM Processor - Falcon (TBD)](https://github.com/quantumwake/alethic-ism-processor-falcon)
-  - [Alethic ISM Processor - Llama2 (TBD)](https://github.com/quantumwake/alethic-ism-processor-llama2)
-  - [Alethic ISM UI (TBD)](https://github.com/quantumwake/alethic-ism-ui)
+  - [Alethic ISM Processor - Gemini (WIP - TBD)](https://github.com/quantumwake/alethic-ism-processor-gemini)
+
+
+- **Alpha Stage Projects**: The Alethic ISM Processor Factory and General Task Processor, still in alpha, use cloud containers for efficient, on-demand resource allocation, targeting performance and cost optimization for processors like Llama and Falcon. Subject to special licensing, a GNU-licensed version is being considered. The Alethic ISM UI is also in alpha as a commercial offering.
+
+  - [Alethic ISM Processor - General (Commercial) ](https://github.com/quantumwake/alethic-ism-processor-general.git)
+  - [Alethic ISM Processor - Falcon (Commercial)](https://github.com/quantumwake/alethic-ism-processor-falcon)
+  - [Alethic ISM Processor - Llama2 (Commercial)](https://github.com/quantumwake/alethic-ism-processor-llama2)
+  - [Alethic ISM UI (alpha)](https://github.com/quantumwake/alethic-ism-ui)
 
 Detailed examples and instructions will be provided soon. We are committed to constantly updating and improving our documentation.
 

@@ -57,7 +57,7 @@ Detailed examples and instructions will be provided soon. We are committed to co
 We warmly welcome contributions, questions, and feedback. Feel free to reach out if you have any queries or suggestions for the project.
 
 ## License
-The Alethic ISM is released under the GNU3 license.
+The Alethic ISM is released under the AGPL/GNU3 license.
 
 ## Acknowledgements
 Alethic Research, Princeton University Center for Human Values, New York University

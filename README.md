@@ -131,13 +131,6 @@ One notable application of Alethic ISM was its use in evaluating animal-related 
    - [Alethic ISM Processor - Anthropic](https://github.com/quantumwake/alethic-ism-processor-anthropic.git)
    - [Alethic ISM Processor - Gemini (WIP)](https://github.com/quantumwake/alethic-ism-processor-gemini)
 
-### Advanced & Commercial Projects
-Some modules are in alpha or commercial stages, targeting advanced use cases and performance optimizations:
-- [Alethic ISM Processor - General (Commercial)](https://github.com/quantumwake/alethic-ism-processor-general.git)
-- [Alethic ISM Processor - Falcon (Commercial)](https://github.com/quantumwake/alethic-ism-processor-falcon)
-- [Alethic ISM Processor - Llama2 (Commercial)](https://github.com/quantumwake/alethic-ism-processor-llama2)
-- [Alethic ISM UI (alpha)](https://github.com/quantumwake/alethic-ism-ui)
-
 Detailed documentation and examples for these projects are forthcoming.
 
 ---

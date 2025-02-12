@@ -34,7 +34,7 @@ Alethic ISM is composed of several interrelated components. Below is an overview
 - **[alethic-ism-ui](https://github.com/quantumwake/alethic-ism-ui.git) (React + Tailwind):**
 - **Alethic ISM UI (v2.0 Alpha):** An experimental upgrade, ISM Studio now features a retro interface that provides a visual and interactive view of the state machine, in real time.
 
-![ISM Studio UI Screenshot](docs/images/ism-studio-v2.png)
+![ISM Studio UI Screenshot](ism-studio-v2.png)
 
 ### Core Libraries
 - **[alethic-ism-core](https://github.com/quantumwake/alethic-ism-core.git) (Python):**  

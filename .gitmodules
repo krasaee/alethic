@@ -1,6 +1,3 @@
 [submodule "alethic-ism-api"]
 	path = alethic-ism-api
 	url = https://github.com/quantumwake/alethic-ism-api.git
-[submodule "alethic-ism-core"]
-	path = alethic-ism-core
-	url = https://github.com/quantumwake/alethic-ism-core

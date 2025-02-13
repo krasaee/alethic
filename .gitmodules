@@ -1,0 +1,3 @@
+[submodule "alethic-ism-api"]
+	path = alethic-ism-api
+	url = https://github.com/quantumwake/alethic-ism-api.git

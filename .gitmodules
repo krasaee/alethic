@@ -1,3 +1,51 @@
 [submodule "alethic-ism-api"]
 	path = alethic-ism-api
 	url = https://github.com/quantumwake/alethic-ism-api.git
+[submodule "alethic-ism-core"]
+	path = alethic-ism-core
+	url = https://github.com/quantumwake/alethic-ism-core.git
+[submodule "alethic-ism-core-go"]
+	path = alethic-ism-core-go
+	url = https://github.com/quantumwake/alethic-ism-core-go.git
+[submodule "alethic-ism-db"]
+	path = alethic-ism-db
+	url = https://github.com/quantumwake/alethic-ism-db.git
+[submodule "alethic-ism-monitor"]
+	path = alethic-ism-monitor
+	url = https://github.com/quantumwake/alethic-ism-monitor.git
+[submodule "alethic-ism-processor-anthropic"]
+	path = alethic-ism-processor-anthropic
+	url = https://github.com/quantumwake/alethic-ism-processor-anthropic.git
+[submodule "alethic-ism-processor-gemini"]
+	path = alethic-ism-processor-gemini
+	url = https://github.com/quantumwake/alethic-ism-processor-gemini.git
+[submodule "alethic-ism-processor-llama"]
+	path = alethic-ism-processor-llama
+	url = https://github.com/quantumwake/alethic-ism-processor-llama.git
+[submodule "alethic-ism-processor-openai"]
+	path = alethic-ism-processor-openai
+	url = https://github.com/quantumwake/alethic-ism-processor-openai.git
+[submodule "alethic-ism-processor-python"]
+	path = alethic-ism-processor-python
+	url = https://github.com/quantumwake/alethic-ism-processor-python.git
+[submodule "alethic-ism-query-api"]
+	path = alethic-ism-query-api
+	url = https://github.com/quantumwake/alethic-ism-query-api.git
+[submodule "alethic-ism-state-router"]
+	path = alethic-ism-state-router
+	url = https://github.com/quantumwake/alethic-ism-state-router.git
+[submodule "alethic-ism-state-sync-store"]
+	path = alethic-ism-state-sync-store
+	url = https://github.com/quantumwake/alethic-ism-state-sync-store.git
+[submodule "alethic-ism-stream-api"]
+	path = alethic-ism-stream-api
+	url = https://github.com/quantumwake/alethic-ism-stream-api.git
+[submodule "alethic-ism-transformer-coalescer"]
+	path = alethic-ism-transformer-coalescer
+	url = https://github.com/quantumwake/alethic-ism-transformer-coalescer.git
+[submodule "alethic-ism-transformer-composite"]
+	path = alethic-ism-transformer-composite
+	url = https://github.com/quantumwake/alethic-ism-transformer-composite.git
+[submodule "alethic-ism-usage"]
+	path = alethic-ism-usage
+	url = https://github.com/quantumwake/alethic-ism-usage.git

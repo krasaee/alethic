@@ -113,6 +113,10 @@ One notable application of Alethic ISM was its use in evaluating animal-related 
 
 ## Getting Started
 
+### Build From Source
+- git submodule update --recursive --remote
+- git submodule update --checkout alethic-ism-api
+
 ### Prerequisites
 - **Programming Languages:** Python (and Go if you plan to work with Go-based modules)
 - **Core Dependencies:**  

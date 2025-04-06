@@ -49,3 +49,6 @@
 [submodule "alethic-ism-usage"]
 	path = alethic-ism-usage
 	url = https://github.com/quantumwake/alethic-ism-usage.git
+[submodule "alethic-ism-helm"]
+	path = alethic-ism-helm
+	url = https://github.com/quantumwake/alethic-ism-helm

@@ -1,170 +1,244 @@
-# Alethic Instruction-Based State Machine (Alethic ISM) [EXPERIMENTAL]
 
-**Note:** Although every component in this project is `mostly` operational, the entire system is EXPERIMENTAL. Use with caution in production environments.
 
-**Alethic ISM** (Instruction-Based State Machine) is a versatile, modular framework for processing instructions as immutable state transitions. Originally inspired by research into animal-friendly language models, the system has evolved into a robust platform for executing a wide range of tasks—from natural language processing to complex graph-based state orchestration in distributed environments.
+# Alethic-ISM
 
----
+_– Instruction-Based State Machine for Composable Analytic Workflows_  
+_– Research Workbench for Computational Reasoning_
 
-## Overview
-
-Alethic ISM uses a state machine approach to:
-- **Encapsulate Data and Instructions:** Each _state_ represents a snapshot of data and processing at a given point.
-- **Execute Immutable Transitions:** Every instruction applied to a state generates a new, immutable state, ensuring auditability and traceability.
-- **Support Distributed Processing:** Built on a consumer/producer model, the system scales through a network of specialized processors and APIs.
-- **Foster Extensibility:** Easily integrate custom processors and components for various applications (e.g., language models, Python code execution, data stream aggregation).
+_(Status: Experimental)_
 
 ---
 
-## Core Concepts
+**Alethic-ISM** is an experimental system for composing and executing directed graphs of instruction-based state transitions. It enables orchestration and computation across domains including _AI pipelines, research workflows, agent modeling, and normative structural analysis_.
 
-- **State:** Represents the data at a specific processing stage.
-- **Instruction:** Commands that transform states.
-- **Processor:** Modules that execute instructions to produce new state transitions.
-- **Immutable State History:** Each execution produces a new state version, preserving the evolution of data over time.
-- **Extensible & Scalable Architecture:** Designed to integrate with various processors and support distributed, real-time data flows.
+Its modular architecture includes a core execution engine, processors, API services, routing and streaming components, and a visual web-based editor for composing, inspecting, and executing live computation graphs. The system integrates seamlessly with AI models, structured data, and executable code, supporting real-time, distributed execution through a publish-subscribe model and dynamic workload management. It is designed to scale across data-intensive workflows and streaming pipelines.
+
+Instructions can invoke code, query data, direct large language models, or perform structured transformations. Each node applies an instruction to an input state via a processor, producing a new, versioned, immutable output state. Together, these nodes form computable workflows that are fully executable, traceable and reproducible.
+
+The system is experimental and is under active development as part of Bioethics with AI research supported by the University of Oxford and the National University of Singapore, with previous research support from Princeton University.
+
+![Alethic Studio](alethic_studio_1.png)
 
 ---
 
-## Architecture & Components
+## Core Architecture
 
-Alethic ISM is composed of several interrelated components. Below is an overview of the major modules:
+Alethic-ISM is built on a modular, extensible, and interoperable architecture:
 
-### ISM STUDIO
-- **[alethic-ism-ui](https://github.com/quantumwake/alethic-ism-ui.git) (React + Tailwind):**
-- **Alethic ISM UI (v2.0 Alpha):** An experimental upgrade, ISM Studio now features a retro interface that provides a visual and interactive view of the state machine, in real time.
+- **Immutable State Transitions**: All computation flows through transformations of immutable, versioned states.
+- **Instruction Graphs**: Workflows are represented as directed graphs. Each node specifies a processor, an instruction, and its inputs.
+- **Execution Engine**: Resolves dependencies, evaluates nodes, and routes outputs through the graph.
+- **Processors**: Modules that define how instructions are interpreted (e.g., OpenAI, Python, Anthropic).
+- **State Store & Router**: Persist and route states between graph segments, enabling distributed execution.
+- **API Services**: Provide access for submitting, inspecting, or modifying workflows via REST or streaming interfaces.
+- **Alethic Studio**: A visual web interface for building, executing, and analyzing workflows.
 
-![ISM Studio UI Screenshot](ism-studio-v2.png)
+> _[Jump to quickstart ⤵](#quickstart)_
+
+---
+
+## Modules
 
 ### Core Libraries
-- **[alethic-ism-core](https://github.com/quantumwake/alethic-ism-core.git) (Python):**  
-  Provides the core state machine logic and interfaces for instruction execution.
 
-- **[alethic-ism-db](https://github.com/quantumwake/alethic-ism-db.git) (Python):**  
-  Manages state storage, versioning, and database interactions.
-
-- **alethic-ism-core-go (Go):**  
-  A Go implementation of the core library to facilitate integration in Go-based environments.
+- `alethic-ism-core` (Python): Core state machine and instruction interfaces.
+- `alethic-ism-db` (Python): State persistence, versioning, and DB integration.
+- `alethic-ism-core-go` (Go): Go implementation of the execution engine.
 
 ### API Services
-- **[alethic-ism-api](https://github.com/quantumwake/alethic-ism-api.git) (Python/FastAPI):**  
-  Exposes core and database functionalities via a RESTful API using Pedantic models.
 
-- **alethic-ism-query-api (Go):**  
-  Enables rapid retrieval of state data across the ISM network.
-
-- **alethic-ism-streams-api (Go):**  
-  Handles boundary proxying and bidirectional streaming of state data. This API also allows consumers to subscribe to the ISM network and supports cluster-wide state routing.
+- `alethic-ism-api` (FastAPI): RESTful control interface for managing workflows.
+- `alethic-ism-query-api` (Go): Fast, read-only access to state and graph data.
+- `alethic-ism-streams-api` (Go): Streaming interface for distributed state transitions and event handling.
 
 ### Instruction Processors
-The framework supports a variety of processors to execute instructions using different backends or programming environments:
-- **[alethic-ism-processor-openai](https://github.com/quantumwake/alethic-ism-processor-openai.git) (Python):**  
-  Processes instructions using OpenAI models.
 
-- **[alethic-ism-processor-anthropic](https://github.com/quantumwake/alethic-ism-processor-anthropic.git) (Python):**  
-  Executes state transitions with Anthropic’s language models.
+- `alethic-ism-processor-openai`: Executes LLM instructions using OpenAI.
+- `alethic-ism-processor-anthropic`: Claude model processor.
+- `alethic-ism-processor-google`: *(In development)* Gemini processor.
+- `alethic-ism-processor-llama`: Supports LLaMA-family models.
+- `alethic-ism-processor-python`: Executes sandboxed Python logic.
+- `alethic-ism-processor-coalescer`: Merges multiple inputs into a single state.
+- `alethic-ism-processor-composite`: Composite multi-source processor.
+- `alethic-ism-ds`: Structured datasource input/output.
 
-- **alethic-ism-processor-google (Python):**  
-  (Work in progress) Integrates with Google Gemini for executing instructions.
+### Instruction Transformers
 
-- **alethic-ism-processor-python (Python):**  
-  Executes restricted Python code against a state input to generate an output state.
+These processors merge or compose multiple inputs:
 
-- **alethic-ism-processor-coalescer (Python):**  
-  Coalesces and processes data streams in configurable ways.
+- `alethic-ism-transformer-coalescer`: Merges multiple input states into a unified output.
+- `alethic-ism-transformer-composite`: Combines structured and model-based outputs across sources.
 
-- **alethic-ism-processor-composite (Python):**  
-  Combines multiple data streams to produce composite outputs.
+### Routing & Persistence
 
-- **alethic-ism-llama (Python):**  
-  Similar to other processor modules but tailored for Llama models.
-
-- **alethic-ism-ds (Datasource Processor):**  
-  Processes both input and output vectors for various data sources.
-
-### State Routing and Persistence
-- **alethic-ism-state-router (Python):**  
-  Dynamically discovers states and routes them to the appropriate processing nodes within the execution graph.
-
-- **alethic-ism-state-store (Python):**  
-  Synchronizes state persistence (if enabled) and automatically forwards states based on configured routing rules.
+- `alethic-ism-state-router`: Dynamically directs state outputs across graph edges.
+- `alethic-ism-state-store`: Manages optional persistence and retrieval.
 
 ### Monitoring & Usage
-- **alethic-ism-usage (Go):**  
-  Monitors system usage and resource allocation for billing and analytics.
 
-- **alethic-ism-monitor (Python):**  
-  Provides logging, system health checks, and monitoring of state transitions.
+- `alethic-ism-monitor`: Logs events, tracks system health.
+- `alethic-ism-usage`: Tracks processor usage and system metrics.
 
-### Additional & Emerging Components
-The Alethic ISM ecosystem continues to expand. Additional modules and experimental projects further extend the system's capabilities, including:
-- **Autoscale Distribution Engine:** For on-demand cloud compute allocation, including containers.
-- **Commercial-Grade Processors:** Such as versions for Falcon, Llama2, and other advanced models.
+### UI
+
+- `alethic-ism-ui`: Alethic Studio — web-based visual editor and real-time graph computer.
+
+### Optional & Deployment Modules
+
+- `alethic-ism-helm`: Kubernetes Helm charts for deployment orchestration.
+- `alethic-ism-state-sync-store`: Sync module for broadcasting state updates in clustered setups.
+
+### Experimental & Emerging
+
+- Autoscale Distribution Engine (WIP)
+- Falcon, Gemini, LLaMA2 processors (in development)
 
 ---
 
-## Example Use Case: Animal-Friendly LLMs
+## Use Cases
 
-One notable application of Alethic ISM was its use in evaluating animal-related queries, as explored in the study [The Case for Animal-Friendly LLMs](docs/Ghose%2C%20Tse%2C%20Rasaee%2C%20Sebo%2C%20Singer.pdf). Although the system was initially developed for this purpose, its flexible design now supports a broad range of applications—from language model instruction processing to complex graph-based workflows.
+- **AI orchestration**:  
+  Multi-step prompt pipelines, dynamic model switching, modular reasoning chains.
 
-![Conceptual Machinery AnimaLLM](docs/ConceptualMachineryAnimaLLM_20231223r2.png)
+- **Data processing with provenance**:  
+  Build structured workflows with immutable state transitions and versioned transformations.
+
+- **Research pipelines**:  
+  Compose analytic workflows with full traceability and graph-based conceptual modeling.
+
+- **Agents with modeled reasoning**:  
+  Encode agent processes, preference updates, and perspective-based decisions.
+
+- **Structured normative reasoning**:  
+  Represent and compute reflective equilibrium, preference assessments, and principled tradeoffs in bioethics, clinical ethics, and more.
+
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="results_example_1.png" width="350"/></td>
+      <td><img src="results_example_2.png" width="350"/></td>
+    </tr>
+    <tr>
+      <td><img src="results_example_3.png" width="350"/></td>
+      <td><img src="results_example_4.png" width="350"/></td>
+    </tr>
+  </table>
+</div>
 
 ---
 
-## Getting Started
+## Execution Model
 
-### Build From Source
+Each graph execution begins with one or more input states and proceeds via instruction nodes.
+
+- Each node: `Input state → Instruction → Output state`
+- Output state is versioned and has a unique ID
+- Graphs can be executed incrementally or fully
+- All transitions are recorded for inspection and replay
+
+---
+
+## Outputs
+
+Each run produces:
+
+- Final and intermediate states (all versioned)
+- Instruction-level metadata (type, processor, duration, dependencies)
+- Logs of model completions or function returns
+- Full execution trace (`state_trace.json`)
+- Optional exports: JSON summaries, CSV tables, serialized replay data
+
+---
+
+## Quickstart
+
+### Requirements
+
+- Python 3.10+  
+- Go (for API services)  
+- Docker (optional)
+
+### Running
+
+After setup:
+
+- Start backend services (API, DB, Studio)
+- Open **Alethic Studio** in your browser
+- Load or create a workflow (e.g., informed consent)
+- Run nodes individually or execute the full graph
+- Inspect states, outputs, and graph trace
+
+### Setup
+
 ```bash
-  git submodule update --recursive --remote
+git clone --recursive https://github.com/alethic/alethic-ism
+cd alethic
+git submodule update --init --recursive
+
+# Run module-specific setup or use docker-compose
 ```
 
-```bash
-git submodule update --checkout alethic-ism-api
-```
+---
 
-### Prerequisites
-- **Programming Languages:** Python (and Go if you plan to work with Go-based modules)
-- **Core Dependencies:**  
-  - [Alethic ISM Core](https://github.com/quantumwake/alethic-ism-core.git)  
-  - [Alethic ISM Database](https://github.com/quantumwake/alethic-ism-db.git)
+## Project Status
 
-### Installation & Setup
-1. **Clone the Repositories:**  
-   Clone the necessary repositories listed above.
-2. **Follow Individual Guides:**  
-   Each component has its own installation instructions—refer to the README in each repository for details.
-3. **Run a Working Example:**  
-   For a complete example using processors like OpenAI and Anthropic, check out:
-   - [Alethic ISM API](https://github.com/quantumwake/alethic-ism-api.git)
-   - [Alethic ISM Processor - OpenAI](https://github.com/quantumwake/alethic-ism-processor-openai.git)
-   - [Alethic ISM Processor - Anthropic](https://github.com/quantumwake/alethic-ism-processor-anthropic.git)
-   - [Alethic ISM Processor - Gemini (WIP)](https://github.com/quantumwake/alethic-ism-processor-gemini)
+**Current stability:**
 
-Detailed documentation and examples for these projects are forthcoming.
+- **Core engine**: Functional and used in experimental settings
+- **Instruction processors**: Stable for Python, OpenAI, Composite; others are in active development
+- **UI (Alethic Studio)**: Alpha version; supports core functionality
+- **API and routing**: Evolving with ongoing architectural extensions
+- ⚠️ **Note**: Interfaces may change; backward compatibility is not guaranteed
+
+Contributions are welcome. This system is not yet production-hardened.
 
 ---
 
-## Contribution
+## Citation
 
-We welcome contributions, feedback, and questions from the community. Whether you’re improving documentation, reporting issues, or developing new modules, your input is invaluable. Please feel free to open an issue or submit a pull request on any of our repositories.
+If you use Alethic-ISM in research or academic work, please cite:
+
+> Rasaee, K., Ghose, S. et al. (2025).  
+> *"Alethic-ISM: Technical Appendix" in Doing Ethics With AI (Ghose, S., et al)*  
+> Forthcoming. [DOI or permanent URL to be added]
+
+---
+
+## Contributing & Collaboration
+
+We welcome contributions, feedback, and questions from the community – and we invite collaboration from developers and researchers.
+
+Whether you're improving documentation, reporting issues, developing new modules, or proposing new use cases, your input is invaluable. This is an experiment and our only aim is results.
+
+You can:
+
+- Submit issues or feature requests
+- Open pull requests for bug fixes or improvements
+- Propose new processors, workflows, or integrations
+- Help expand documentation or UI functionality
+- Build analytic workflows for use cases
+- Utilize in reasoning, decision-making, or agentic projects
+
+If you're working on related projects or would like to collaborate on applied deployments, please get in touch. We're especially interested in partnerships across research tooling, applied reasoning systems, the structure of normative ethics, applied use in biomedical and legal settings, and artificial intelligence.
+
+See `CONTRIBUTING.md` (coming soon) for development guidelines, or please reach out directly to our research team.
+
+---
+
+## Contact
+
+**For questions, feedback, or collaboration:**
+
+📧 [kasra@alethic.ai](mailto:kasra@alethic.ai)  
+📧 [sankalpa@alethic.ai](mailto:sankalpa@alethic.ai)
+
+Alethic-ISM is developed as part of the *Bioethics With AI* project at the University of Oxford and the National University of Singapore.
+
+If you're using **Alethic-ISM** in research or applied contexts, let us know — we’re building a shared case library.
 
 ---
 
 ## License
 
-Alethic ISM is released under the AGPL/GNU3 license.
-
----
-
-## Acknowledgements
-
-Special thanks to:
-- **Alethic Research**
-- **Princeton University Center for Human Values**
-- **New York University**
-
----
-
-For updates, additional documentation, and involvement opportunities, please visit our [GitHub organization page](https://github.com/quantumwake/alethic) or join our community forums.
-
-Happy coding!
+**AGPL v3**  
+Intended for academic, research, and nonprofit institutional use.

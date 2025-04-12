@@ -1,6 +1,6 @@
 # Alethic Instruction-Based State Machine (Alethic ISM) [EXPERIMENTAL]
 
-**Note:** Although every component in this project is `mostly` operational, the entire system is EXPERIMENTAL. Use with caution in production environments.
+**Note:** Although every component in this project is `mostly` operational, the entire system is EXPERIMENTAL and lacks public documentation. Use with caution in production environments.
 
 **Alethic ISM** (Instruction-Based State Machine) is a versatile, modular framework for processing instructions as immutable state transitions. Originally inspired by research into animal-friendly language models, the system has evolved into a robust platform for executing a wide range of tasks—from natural language processing to complex graph-based state orchestration in distributed environments.
 
@@ -30,9 +30,8 @@ Alethic ISM uses a state machine approach to:
 
 Alethic ISM is composed of several interrelated components. Below is an overview of the major modules:
 
-### ISM STUDIO
-- **[alethic-ism-ui](https://github.com/quantumwake/alethic-ism-ui.git) (React + Tailwind):**
-- **Alethic ISM UI (v2.0 Alpha):** An experimental upgrade, ISM Studio now features a retro interface that provides a visual and interactive view of the state machine, in real time.
+### ISM UI STUDIO
+- **[alethic-ism-ui](https://github.com/quantumwake/alethic-ism-ui.git) (v2.0.experimental):**
 
 ![ISM Studio UI Screenshot](ism-studio-v2.png)
 
@@ -40,20 +39,20 @@ Alethic ISM is composed of several interrelated components. Below is an overview
 - **[alethic-ism-core](https://github.com/quantumwake/alethic-ism-core.git) (Python):**  
   Provides the core state machine logic and interfaces for instruction execution.
 
-- **[alethic-ism-db](https://github.com/quantumwake/alethic-ism-db.git) (Python):**  
+- **[alethic-ism-db](https://github.com/quantumwake/alethic-ism-db.git):**  
   Manages state storage, versioning, and database interactions.
 
-- **alethic-ism-core-go (Go):**  
+- **[alethic-ism-core-go](https://github.com/quantumwake/alethic-ism-core-go.git):**
   A Go implementation of the core library to facilitate integration in Go-based environments.
 
 ### API Services
-- **[alethic-ism-api](https://github.com/quantumwake/alethic-ism-api.git) (Python/FastAPI):**  
+- **[alethic-ism-api](https://github.com/quantumwake/alethic-ism-api.git): (V1 Python):**  
   Exposes core and database functionalities via a RESTful API using Pedantic models.
 
-- **alethic-ism-query-api (Go):**  
+- **[alethic-ism-query-api](https://github.com/quantumwake/alethic-ism-query-api.git) (Go):**  
   Enables rapid retrieval of state data across the ISM network.
 
-- **alethic-ism-streams-api (Go):**  
+- **[alethic-ism-streams-api](https://github.com/quantumwake/alethic-ism-streams-api.git) (Go):**
   Handles boundary proxying and bidirectional streaming of state data. This API also allows consumers to subscribe to the ISM network and supports cluster-wide state routing.
 
 ### Instruction Processors
@@ -64,43 +63,59 @@ The framework supports a variety of processors to execute instructions using dif
 - **[alethic-ism-processor-anthropic](https://github.com/quantumwake/alethic-ism-processor-anthropic.git) (Python):**  
   Executes state transitions with Anthropic’s language models.
 
-- **alethic-ism-processor-google (Python):**  
-  (Work in progress) Integrates with Google Gemini for executing instructions.
+- **[alethic-ism-processor-gemini](https://github.com/quantumwake/alethic-ism-processor-gemini.git) (Python):**
+  Executes state transitions with Gemini language models.
 
-- **alethic-ism-processor-python (Python):**  
+- **[alethic-ism-processor-python](https://github.com/quantumwake/alethic-ism-processor-python.git) (Python):**
   Executes restricted Python code against a state input to generate an output state.
 
-- **alethic-ism-processor-coalescer (Python):**  
-  Coalesces and processes data streams in configurable ways.
+- **[alethic-ism-online-cross-join](https://github.com/quantumwake/alethic-ism-online-cross-join.git) (Python):**
+  Performed a product of two states in a distributed manner, allowing for efficient cross-joins of large datasets.
 
-- **alethic-ism-processor-composite (Python):**  
-  Combines multiple data streams to produce composite outputs.
+- **[alethic-ism-online-merge](https://github.com/quantumwake/alethic-ism-online-merge.git) (Go):**
+  Combines multiple data state events to produce a composite stat output event, given a shared composite key as part of the inputs.
 
-- **alethic-ism-llama (Python):**  
+- **[alethic-ism-online-join](https://github.com/quantumwake/alethic-ism-online-join.git) (Go):**
+  Performs a windowing online inner join between two or more states, as data arrives, on a log2 timescale, provided join keys are specified and data arrives within a reasonable but configurable window.
+- 
+- **[alethic-ism-processor-llama](https://github.com/quantumwake/alethic-ism-processor-llama.git) (Go):**
   Similar to other processor modules but tailored for Llama models.
 
-- **alethic-ism-ds (Datasource Processor):**  
-  Processes both input and output vectors for various data sources.
+- **[alethic-ism-ds](https://github.com/quantumwake/alethic-ism-ds.git) (Go):**
+  Processes data source state instructions, given an external datasource such as a SQL database.
+
+- **[alethic-ism-memory](https://github.com/quantumwake/alethic-ism-memory.git) (Go):**
+  Provides a memory processor for LLMs, allowing for the storage and retrieval of state data during state processing and transitions.
 
 ### State Routing and Persistence
-- **alethic-ism-state-router (Python):**  
+- **[alethic-ism-state-router](https://github.com/quantumwake/alethic-ism-state-router.git) (V1 Python):**
   Dynamically discovers states and routes them to the appropriate processing nodes within the execution graph.
 
-- **alethic-ism-state-store (Python):**  
+- **[alethic-ism-router](https://github.com/quantumwake/alethic-ism-router.git) (V2 Go):
+  pending release: upgraded version of the state router, also handles cross ISM cluster routing.
+
+- **[alethic-ism-state-store](https://github.com/quantumwake/alethic-ism-state-store.git) (V1 Python):
   Synchronizes state persistence (if enabled) and automatically forwards states based on configured routing rules.
 
-### Monitoring & Usage
-- **alethic-ism-usage (Go):**  
-  Monitors system usage and resource allocation for billing and analytics.
+- **[alethic-ism-storage-db](https://github.com/quantumwake/alethic-ism-storage-db.git) (V2 Go):
+  pending release: upgraded version of the state sync store, specifically for database storage class (s3 and other storage classes are available but not fully tested)
 
-- **alethic-ism-monitor (Python):**  
-  Provides logging, system health checks, and monitoring of state transitions.
+- **[alethic-ism-storage-s3](https://github.com/quantumwake/alethic-ism-storage-s3.git) (V2 Go):**
+  pending release: upgraded version of the state sync store, specifically for s3 storage class (other storage classes are available but not fully tested)  
+
+### Monitoring & Usage
+- **[alethic-ism-usage](https://github.com/quantumwake/alethic-ism-usage.git) (V1 Go)**
+  Persists usage data for any state processor and provides a REST API for querying usage data.
+
+- **[alethic-ism-monitor](https://github.com/quantumwake/alethic-ism-monitor.git) (V1 Python - deprecated but still in use):**
+  Provides logging, and state transition reporting (v2 will be out sooner than later.
 
 ### Additional & Emerging Components
 The Alethic ISM ecosystem continues to expand. Additional modules and experimental projects further extend the system's capabilities, including:
-- **Autoscale Distribution Engine:** For on-demand cloud compute allocation, including containers.
-- **Commercial-Grade Processors:** Such as versions for Falcon, Llama2, and other advanced models.
-
+- **Alethic ISM Autoscaler:** For on-demand cloud compute allocation and scaling based on state processing needs in a multi-tenant environment.
+- **Alethic ISM Interactive Action Hooks + UI:** For real-time user interactions and feedback loops for reinforcement learning capabilities during state executions.
+- **Alethic ISM Training Studio:** For training and fine-tuning models based on state data (e.g., automated fine-tuning models as defined by the instruction graph).
+- **Alethic ISM MCP Server:** Integration of alethic-ism with model context protocol (MCP) as defined by by Anthropic.
 ---
 
 ## Example Use Case: Animal-Friendly LLMs
@@ -112,35 +127,11 @@ One notable application of Alethic ISM was its use in evaluating animal-related 
 ---
 
 ## Getting Started
-
-### Build From Source
-```bash
-  git submodule update --recursive --remote
-```
-
-```bash
-git submodule update --checkout alethic-ism-api
-```
-
-### Prerequisites
-- **Programming Languages:** Python (and Go if you plan to work with Go-based modules)
-- **Core Dependencies:**  
-  - [Alethic ISM Core](https://github.com/quantumwake/alethic-ism-core.git)  
-  - [Alethic ISM Database](https://github.com/quantumwake/alethic-ism-db.git)
-
-### Installation & Setup
-1. **Clone the Repositories:**  
-   Clone the necessary repositories listed above.
-2. **Follow Individual Guides:**  
-   Each component has its own installation instructions—refer to the README in each repository for details.
-3. **Run a Working Example:**  
-   For a complete example using processors like OpenAI and Anthropic, check out:
-   - [Alethic ISM API](https://github.com/quantumwake/alethic-ism-api.git)
-   - [Alethic ISM Processor - OpenAI](https://github.com/quantumwake/alethic-ism-processor-openai.git)
-   - [Alethic ISM Processor - Anthropic](https://github.com/quantumwake/alethic-ism-processor-anthropic.git)
-   - [Alethic ISM Processor - Gemini (WIP)](https://github.com/quantumwake/alethic-ism-processor-gemini)
-
 Detailed documentation and examples for these projects are forthcoming.
+
+The quickest way to get started is to use the provided Helm charts, this will setup the basic infrastructure for the ISM system, including the core components and a few example processors.
+
+- **[alethic-ism-helm](https://github.com/quantumwake/alethic-ism-helm.git)
 
 ---
 
@@ -150,9 +141,8 @@ We welcome contributions, feedback, and questions from the community. Whether yo
 
 ---
 
-## License
-
-Alethic ISM is released under the AGPL/GNU3 license.
+### License
+Alethic ISM is under a DUAL licensing model, please refer to [LICENSE.md](LICENSE.md).
 
 ---
 

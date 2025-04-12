@@ -2,7 +2,7 @@
 
 **Version 1.0 – March 23, 2025**
 
-*This document outlines the dual licensing terms under which Alethic Instruction State Machine (ISM) is made available by Kasra Rasaee*
+*This document outlines the dual licensing terms under which Alethic Instruction-Based State Machine (ISM) is made available*
 
 ---
 
@@ -14,7 +14,7 @@ Alethic Instruction State Machine (ISM) falls under a dual licensing model, allo
 
 ## 2. Open Source License
 
-For open source usage, Alethic Instruction State Machine (ISM) and all components made publicly is available under the [GNU AFFERO GENERAL PUBLIC LICENSE v3 (AGPLv3)](LICENSE). This license permits you to use, modify, and redistribute the Software provided that any distributed modifications or derivative works are licensed under the AGPLv3. Please see the full text of the AGPLv3 in the accompanying LICENSE file.
+For open source usage, Alethic Instruction State Machine (ISM) and all components made publicly is available under the [GNU AFFERO GENERAL PUBLIC LICENSE v3 (AGPLv3)](LICENSE). This license permits you to use, modify, and redistribute the Software provided that any distributed modifications or derivative works are licensed under the AGPLv3. Please see the full text of the AGPLv3 in the accompanying [OSS-LICENSE.md](OSS-LICENSE.md) file.
 
 ---
 

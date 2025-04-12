@@ -77,7 +77,7 @@ The framework supports a variety of processors to execute instructions using dif
 
 - **[alethic-ism-online-join](https://github.com/quantumwake/alethic-ism-online-join.git) (Go):**
   Performs a windowing online inner join between two or more states, as data arrives, on a log2 timescale, provided join keys are specified and data arrives within a reasonable but configurable window.
-- 
+
 - **[alethic-ism-processor-llama](https://github.com/quantumwake/alethic-ism-processor-llama.git) (Go):**
   Similar to other processor modules but tailored for Llama models.
 
@@ -91,13 +91,13 @@ The framework supports a variety of processors to execute instructions using dif
 - **[alethic-ism-state-router](https://github.com/quantumwake/alethic-ism-state-router.git) (V1 Python):**
   Dynamically discovers states and routes them to the appropriate processing nodes within the execution graph.
 
-- **[alethic-ism-router](https://github.com/quantumwake/alethic-ism-router.git) (V2 Go):
+- **[alethic-ism-router](https://github.com/quantumwake/alethic-ism-router.git) (V2 Go):**  
   pending release: upgraded version of the state router, also handles cross ISM cluster routing.
 
-- **[alethic-ism-state-store](https://github.com/quantumwake/alethic-ism-state-store.git) (V1 Python):
+- **[alethic-ism-state-store](https://github.com/quantumwake/alethic-ism-state-store.git) (V1 Python):**  
   Synchronizes state persistence (if enabled) and automatically forwards states based on configured routing rules.
 
-- **[alethic-ism-storage-db](https://github.com/quantumwake/alethic-ism-storage-db.git) (V2 Go):
+- **[alethic-ism-storage-db](https://github.com/quantumwake/alethic-ism-storage-db.git) (V2 Go):**  
   pending release: upgraded version of the state sync store, specifically for database storage class (s3 and other storage classes are available but not fully tested)
 
 - **[alethic-ism-storage-s3](https://github.com/quantumwake/alethic-ism-storage-s3.git) (V2 Go):**

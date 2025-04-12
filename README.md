@@ -104,11 +104,11 @@ The ISM framework supports various processors to execute instructions using diff
 
 
 - **[alethic-ism-ds](https://github.com/quantumwake/alethic-ism-ds.git) (Go):**  
-  Processes data source state instructions by connecting to external data sources (e.g., SQL databases).
+  *(Pending public release)* Processes data source state instructions by connecting to external data sources (e.g., SQL databases).
 
 
 - **[alethic-ism-memory](https://github.com/quantumwake/alethic-ism-memory.git) (Go):**  
-  Provides a memory processor for LLMs, storing and retrieving state data during transitions to support context-aware processing.
+  *(Pending public release)* Provides a memory processor for LLMs, storing and retrieving state data during transitions to support context-aware processing.
 
 ### State Routing & Persistence
 
@@ -117,7 +117,7 @@ The ISM framework supports various processors to execute instructions using diff
 
 
 - **[alethic-ism-router](https://github.com/quantumwake/alethic-ism-router.git) (V2 Go):**  
-  *(Pending publicrelease)* An upgraded version of the state router that also handles routing across ISM clusters.
+  *(Pending public release)* An upgraded version of the state router that also handles routing across ISM clusters.
 
 
 - **[alethic-ism-state-sync](https://github.com/quantumwake/alethic-ism-state-sync-store.git) (V1 Python):**  
@@ -129,7 +129,7 @@ The ISM framework supports various processors to execute instructions using diff
 
 
 - **[alethic-ism-storage-s3](https://github.com/quantumwake/alethic-ism-storage-s3.git) (V2 Go):**  
-  *(Pending publicrelease)* An upgraded version of the state sync store for S3-based storage, with other storage classes also in development.
+  *(Pending public elease)* An upgraded version of the state sync store for S3-based storage, with other storage classes also in development.
 
 
 ### Monitoring & Usage

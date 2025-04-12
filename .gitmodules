@@ -64,3 +64,6 @@
 [submodule "alethic-ism-state-online-cross-join"]
 	path = alethic-ism-state-online-cross-join
 	url = https://github.com/quantumwake/alethic-ism-state-online-cross-join.git
+[submodule "alethic-ism-state-online-merge"]
+	path = alethic-ism-state-online-merge
+	url = https://github.com/quantumwake/alethic-ism-state-online-merge

@@ -11,7 +11,9 @@ _(Status: Experimental)_
 
 **Alethic-ISM** is an experimental system for composing and executing directed graphs of instruction-based state transitions. It enables orchestration and computation across domains including _AI pipelines, research workflows, agent modeling, and normative structural analysis_.
 
-Its modular architecture includes a core execution engine, processors, API services, routing and streaming components, and a visual web-based editor for composing, inspecting, and executing live computation graphs. The system integrates seamlessly with AI models, structured data, and executable code, supporting real-time, distributed execution through a publish-subscribe model and dynamic workload management. It is designed to scale across data-intensive workflows and streaming pipelines.
+Its modular architecture includes a core execution engine, processors, API services, routing and streaming components, and a visual web-based editor for composing, inspecting, and executing live computation graphs. 
+
+The system integrates seamlessly with AI models, structured data, and executable code, supporting real-time, distributed execution through a publish-subscribe model and dynamic workload management. It is designed to scale across data-intensive workflows and streaming pipelines.
 
 Instructions can invoke code, query data, direct large language models, or perform structured transformations. Each node applies an instruction to an input state via a processor, producing a new, versioned, immutable output state. Together, these nodes form computable workflows that are fully executable, traceable and reproducible.
 

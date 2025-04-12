@@ -199,7 +199,7 @@ Contributions are welcome. This system is not yet production-hardened.
 If you use Alethic-ISM in research or academic work, please cite:
 
 > Rasaee, K., Ghose, S. et al. (2025).  
-> *"Alethic-ISM: Technical Appendix" in Doing Ethics With AI (Ghose, S., et al)*  
+> *"Alethic-ISM: A Research Workbench for Analytic Workflows"*  
 > Forthcoming. [DOI or permanent URL to be added]
 
 ---

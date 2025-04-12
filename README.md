@@ -286,6 +286,11 @@ The quickest way to get started is to use the provided Helm charts and deploy it
 
 - **[alethic-ism-helm](https://github.com/quantumwake/alethic-ism-helm.git)**
 
+## Pull Latest from Main
+
+```shell
+git submodule update --init --recursive
+```
 
 ---
 

@@ -132,6 +132,9 @@ The ISM framework supports various processors to execute instructions using diff
   *(Pending public elease)* An upgraded version of the state sync store for S3-based storage, with other storage classes also in development.
 
 
+- **[alethic-ism-state-fs](https://github.com/quantumwake/alethic-ism-storage-s3.git) (Rust):**  
+  *(Pending public release)* the official ISM DFS implementation, which is a distributed file system for storing and retrieving state data. It is designed to work seamlessly with the Alethic ISM ecosystem and provides high availability and fault tolerance.
+
 ### Monitoring & Usage
 
 - **[alethic-ism-usage](https://github.com/quantumwake/alethic-ism-usage.git) (V1 Go):**  

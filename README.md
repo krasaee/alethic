@@ -110,15 +110,15 @@ The ISM framework supports various processors to execute instructions using diff
 
 These processors merge or compose multiple inputs into a single or product of output states:
 
-- **[alethic-ism-online-cross-join](https://github.com/quantumwake/alethic-ism-online-cross-join.git) (Python):**  
+- **[alethic-ism-state-online-cross-join](https://github.com/quantumwake/alethic-ism-state-online-cross-join.git) (Python):**  
   Performs a distributed product of two states, enabling efficient cross-joins for large datasets.
 
 
-- **[alethic-ism-online-merge](https://github.com/quantumwake/alethic-ism-online-merge.git) (Go):**  
+- **[alethic-ism-state-online-merge](https://github.com/quantumwake/alethic-ism-state-online-merge.git) (Go):**  
   Combines multiple data state events into a single composite output event, given a shared composite key.
 
 
-- **[alethic-ism-online-join](https://github.com/quantumwake/alethic-ism-online-join.git) (Go):**  
+- **[alethic-ism-state-online-join](https://github.com/quantumwake/alethic-ism-state-online-join.git) (Go):**  
   Performs a windowed online inner join between two or more states, using a log2 timescale, given properly configured join keys and arrival windows.
 
 
@@ -147,8 +147,7 @@ These processors merge or compose multiple inputs into a single or product of ou
 - **[alethic-ism-fs](https://github.com/quantumwake/alethic-ism-fs.git) (Rust):**  
   *(Pending public release)* the official ISM DFS implementation, which is a distributed file system for storing and retrieving state data. It is designed to work seamlessly with the Alethic ISM ecosystem and provides high availability and fault tolerance.
 
-
-### Monitoring & Usage
+### Monitoring & Usage and other functions
 
 - **[alethic-ism-usage](https://github.com/quantumwake/alethic-ism-usage.git) (V1 Go):**  
   Persists usage data for any state processor and provides a REST API for querying usage metrics.
@@ -157,10 +156,23 @@ These processors merge or compose multiple inputs into a single or product of ou
 - **[alethic-ism-monitor](https://github.com/quantumwake/alethic-ism-monitor.git) (V1 Python - deprecated but still in use):**  
   Offers logging and state transition reporting. A v2 release is planned, which will bring improvements and additional features.
 
+
+- **[alethic-ism-vault-api](https://github.com/quantumwake/alethic-ism-vault-api.git) (Go):**  
+  (pending public release) Offers mechanism to manage, store and utilize secrets and tokens for each tenant, user, team, and individual project and processor step.
+
+
+- **[alethic-ism-logger](https://github.com/quantumwake/alethic-ism-logger.git) (Go):**  
+  (pending public release) Offers user level logging capabilities, specifically for the purpose of debugging instructions written in python, code, or other languages. 
+
 ### Web Application
 
 - **[alethic-ism-ui](https://github.com/quantumwake/alethic-ism-ui.git) (v2.0.experimental):**  
   Provides a web-based interface for designing, monitoring, and managing state machines. This interface allows you to visualize instruction flows, inspect processor outputs, and configure system-level settings.
+
+
+- **[alethic-ism-actions-ui](https://github.com/quantumwake/alethic-ism-actions.git) (v2.0.experimental):**  
+  (pending public release) Provides a web-based interface allowing one or more users to interact outside the graph (ex: for reinforcement learning).
+
 
 ### State Routing & Persistence
 
@@ -181,7 +193,7 @@ These processors merge or compose multiple inputs into a single or product of ou
 
 
 - **[alethic-ism-storage-s3](https://github.com/quantumwake/alethic-ism-storage-s3.git) (V2 Go):**  
-  *(Pending public elease)* An upgraded version of the state sync store for S3-based storage, with other storage classes also in development.
+  *(Pending public release)* An upgraded version of the state sync store for S3-based storage, with other storage classes also in development.
 
 
 - **[alethic-ism-fs](https://github.com/quantumwake/alethic-ism-fs.git) (Rust):**  
@@ -201,6 +213,10 @@ The Alethic ISM ecosystem continues to expand. Experimental modules extend the s
 
 - **Alethic ISM Training Studio:**  
   Provides tools for training or fine-tuning models based on state data, including automated fine-tuning as defined by instruction graphs.
+
+
+- **Alethic ISM Market Place:**
+  Marketplace for sharing and discovering processors, workflows, and modules. This will allow users to contribute and access community-driven resources.
 
 
 - **Alethic ISM MCP Server:**  

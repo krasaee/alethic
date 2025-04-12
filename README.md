@@ -26,6 +26,15 @@ Alethic ISM uses a state machine approach to:
 
 ---
 
+## Quick Start Guide
+Detailed documentation and examples for these projects are forthcoming.
+
+The quickest way to get started is to use the provided Helm charts and deploy it on a local [k8s kind cluster](https://kind.sigs.k8s.io/), this will setup the basic infrastructure for the ISM system, including the core components and a few example processors.
+
+- **[alethic-ism-helm](https://github.com/quantumwake/alethic-ism-helm.git)**
+
+---
+
 ## Architecture & Components
 
 Alethic ISM is composed of several interrelated components. Below is an overview of the major modules within the ecosystem.
@@ -170,15 +179,6 @@ The Alethic ISM ecosystem continues to expand. Experimental modules extend the s
 One notable application of Alethic ISM was its use in evaluating animal-related queries, as explored in the study [The Case for Animal-Friendly LLMs](docs/Ghose%2C%20Tse%2C%20Rasaee%2C%20Sebo%2C%20Singer.pdf). Although the system was initially developed for this purpose, its flexible design now supports a broad range of applications—from language model instruction processing to complex graph-based workflows.
 
 ![Conceptual Machinery AnimaLLM](docs/ConceptualMachineryAnimaLLM_20231223r2.png)
-
----
-
-## Getting Started
-Detailed documentation and examples for these projects are forthcoming.
-
-The quickest way to get started is to use the provided Helm charts, this will setup the basic infrastructure for the ISM system, including the core components and a few example processors.
-
-- **[alethic-ism-helm](https://github.com/quantumwake/alethic-ism-helm.git)
 
 ---
 

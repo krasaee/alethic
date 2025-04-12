@@ -55,3 +55,6 @@
 [submodule "alethic-ism-ui"]
 	path = alethic-ism-ui
 	url = https://github.com/quantumwake/alethic-ism-ui
+[submodule "alethic-ism-online-cross-join"]
+	path = alethic-ism-online-cross-join
+	url = https://github.com/quantumwake/alethic-ism-online-cross-join

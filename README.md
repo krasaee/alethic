@@ -290,8 +290,8 @@ The quickest way to get started is to use the provided Helm charts and deploy it
 
 ```shell
 git submodule update --init --recursive
+git submodule update --remote
 ```
-
 ---
 
 ## Project Status

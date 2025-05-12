@@ -69,7 +69,7 @@ Alethic-ISM is built on a modular, extensible, and interoperable architecture:
   Enables rapid retrieval of state data across the ISM network using ISM-QL. Designed for low-latency queries and scalable data access.
 
 
-- **[alethic-ism-streams-api](https://github.com/quantumwake/alethic-ism-streams-api.git) (Go):**  
+- **[alethic-ism-stream-api](https://github.com/quantumwake/alethic-ism-stream-api.git) (Go):**  
   Handles boundary proxying and bidirectional streaming of state data. This API also allows consumers and external data-sources to subscribe to the ISM network and supports cluster-wide state routing.
 
 

@@ -292,6 +292,10 @@ The quickest way to get started is to use the provided Helm charts and deploy it
 git submodule update --init --recursive
 git submodule update --remote
 ```
+
+```shell
+git submodule foreach 'git fetch --tags && git checkout $(git describe --tags `git rev-list --tags --max-count=1`)'
+```
 ---
 
 ## Project Status

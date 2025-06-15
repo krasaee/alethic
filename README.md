@@ -92,6 +92,8 @@ The ISM framework supports various processors to execute instructions using diff
 - **[alethic-ism-processor-python](https://github.com/quantumwake/alethic-ism-processor-python.git) (Python):**  
   Executes restricted Python code against a state input to generate the resulting output state.
 
+- **[alethic-ism-processor-mako](https://github.com/quantumwake/alethic-ism-processor-mako.git) (Python):**  
+  Executes Mako code against a state input to generate the resulting output state.
 
 - **[alethic-ism-processor-llama](https://github.com/quantumwake/alethic-ism-processor-llama.git) (Go):**  
   Similar to other processor modules but tailored for Llama language models.

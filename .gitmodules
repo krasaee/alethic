@@ -90,3 +90,6 @@
 	path = alethic-ism-state-online-merge
 	url = https://github.com/quantumwake/alethic-ism-state-online-merge
 	branch = main
+[submodule "alethic-ism-processor-mako"]
+	path = alethic-ism-processor-mako
+	url = https://github.com/quantumwake/alethic-ism-processor-mako.git

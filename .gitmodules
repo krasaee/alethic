@@ -93,3 +93,4 @@
 [submodule "alethic-ism-processor-mako"]
 	path = alethic-ism-processor-mako
 	url = https://github.com/quantumwake/alethic-ism-processor-mako.git
+	branch = main

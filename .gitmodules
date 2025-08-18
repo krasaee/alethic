@@ -94,3 +94,6 @@
 	path = alethic-ism-processor-mako
 	url = https://github.com/quantumwake/alethic-ism-processor-mako.git
 	branch = v0.1.7
+[submodule "alethic-ism-state-tables"]
+	path = alethic-ism-state-tables
+	url = https://github.com/quantumwake/alethic-ism-state-tables.git

@@ -7,6 +7,7 @@ _– Research Workbench for Computational Reasoning_
 
 _(Status: Experimental)_
 
+
 ---
 
 **Alethic-ISM** is an experimental system for composing and executing directed graphs of instruction-based state transitions. It enables orchestration and computation across domains including _AI pipelines, research workflows, agent modeling, and normative structural analysis_.

@@ -20,7 +20,10 @@ Instructions can invoke code, query data, direct large language models, or perfo
 
 The system is experimental and is under active development as part of Bioethics with AI research supported by the University of Oxford and the National University of Singapore, with previous research support from Princeton University.
 
-![Alethic Studio](ism-studio-v4.png)
+
+![Alethic Studio Example 1](ism-studio-v4.png)
+
+![Alethic Studio Example 2](ism-studio-v5.png)
 
 ---
 

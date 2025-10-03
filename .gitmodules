@@ -97,3 +97,7 @@
 [submodule "alethic-ism-state-tables"]
 	path = alethic-ism-state-tables
 	url = https://github.com/quantumwake/alethic-ism-state-tables.git
+[submodule "alethic-ism-processor-openrouter"]
+	path = alethic-ism-processor-openrouter
+	url = https://github.com/quantumwake/alethic-ism-processor-openrouter.git
+	branch = main

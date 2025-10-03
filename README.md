@@ -81,6 +81,10 @@ Alethic-ISM is built on a modular, extensible, and interoperable architecture:
 
 The ISM framework supports various processors to execute instructions using different backends or programming environments:
 
+- **[alethic-ism-processor-openrouter](https://github.com/quantumwake/alethic-ism-processor-openrouter.git) (Python):**
+  Executes instructions using OpenRouter AI as a unified proxy to access multiple AI models through a single interface.
+
+
 - **[alethic-ism-processor-openai](https://github.com/quantumwake/alethic-ism-processor-openai.git) (Python):**  
   Executes instructions using OpenAI language models.
 

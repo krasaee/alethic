@@ -21,7 +21,7 @@ init:
 	@echo "Initializing submodules..."
 	git submodule update --init --recursive
 
-# Update submodules to latest remote
+# Update submodules to latest remote main branch
 update:
 	@echo "Updating submodules to latest remote..."
 	git submodule update --remote

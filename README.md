@@ -23,7 +23,7 @@ The system is experimental and is under active development as part of Bioethics 
 
 ![Alethic Studio Example 1](ism-studio-v4.png)
 
-![Alethic Studio Example 2](ism-studio-v5.png)
+![Alethic Studio Example 2](ism-studio-v6.png)
 
 ---
 
@@ -290,21 +290,107 @@ Each run produces:
 ---
 
 ## Quickstart
-Detailed documentation and examples for these projects are forthcoming.
 
-The quickest way to get started is to use the provided Helm charts and deploy it on a local [k8s kind cluster](https://kind.sigs.k8s.io/), this will setup the basic infrastructure for the ISM system, including the core components and a few example processors.
+The quickest way to get started is to deploy Alethic-ISM on a local [k8s kind cluster](https://kind.sigs.k8s.io/). This setup includes the core infrastructure, processors, APIs, and the Alethic Studio UI.
 
-- **[alethic-ism-helm](https://github.com/quantumwake/alethic-ism-helm.git)**
+### Prerequisites
 
-## Pull Latest from Main
+- [Docker](https://docs.docker.com/get-docker/)
+- [kind](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/)
+- [Helm](https://helm.sh/docs/intro/install/)
+
+### Local Deployment
+
+1. **Clone the repository and initialize submodules:**
 
 ```shell
+git clone https://github.com/quantumwake/alethic.git
+cd alethic
 git submodule update --init --recursive
+```
+
+2. **Create a kind cluster with ingress enabled:**
+
+```shell
+kind create cluster --config alethic-ism-helm/kind-config-ingress.yaml
+```
+
+3. **Install NGINX Ingress Controller:**
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
+kubectl wait --namespace ingress-nginx \
+  --for=condition=ready pod \
+  --selector=app.kubernetes.io/component=controller \
+  --timeout=90s
+```
+
+4. **Deploy Alethic-ISM using Helm:**
+
+```shell
+cd alethic-ism-helm
+helm dependency update
+helm install alethic . --timeout 10m
+```
+
+5. **Wait for all pods to be ready:**
+
+```shell
+kubectl get pods -w
+```
+
+### Accessing the System
+
+Once deployed, the following services are available:
+
+- **Alethic Studio UI**: http://localhost/ui
+- **Sign Up**: http://localhost/ui/signup/basic
+- **API Endpoint**: http://localhost/api/v1
+- **Query API**: http://localhost/query
+
+### Getting Started with Alethic Studio
+
+1. Navigate to http://localhost/ui/signup/basic
+2. Create an account
+3. Log in and start building your first instruction graph
+
+### Viewing Deployment Details
+
+To view the ingress configuration and verify endpoints:
+
+```shell
+kubectl get ingress
+kubectl describe ingress
+```
+
+To check service status:
+
+```shell
+kubectl get services
+kubectl get pods
+```
+
+### Updating to Latest Versions
+
+Pull the latest changes from all submodules:
+
+```shell
 git submodule update --remote
 ```
 
+Or checkout the latest tagged versions:
+
 ```shell
 git submodule foreach 'git fetch --tags && git checkout $(git describe --tags `git rev-list --tags --max-count=1`)'
+```
+
+### Cleanup
+
+To delete the kind cluster and clean up:
+
+```shell
+kind delete cluster
 ```
 ---
 

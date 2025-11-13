@@ -23,7 +23,7 @@ The system is experimental and is under active development as part of Bioethics 
 
 ![Alethic Studio Example 1](ism-studio-v4.png)
 
-![Alethic Studio Example 2](ism-studio-v7.png)
+![Alethic Studio Example 2](ism-studio-v8.png)
 
 ---
 

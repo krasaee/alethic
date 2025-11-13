@@ -2,11 +2,12 @@
 
 # Alethic-ISM
 
-_– Instruction-Based State Machine for Composable Analytic Workflows_  
-_– Research Workbench for Computational Reasoning_
-
 _(Status: Experimental)_
 
+_– Instruction-Based State Machine for Composable Analytic Workflows_
+_– Research Workbench for Computational Reasoning_
+
+![Alethic ISM Studio Demo](ism-studio-v1-video.gif)
 
 ---
 
